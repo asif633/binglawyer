@@ -18,6 +18,10 @@ import { ClientmainComponent } from './client/clientmain.component';
 import { LawyerdetailcontainerComponent } from './client/lawyerdetailpage/lawyerdetailcontainer.component';
 import { LawyerdetailComponent } from './client/lawyerdetailpage/lawyerdetail/lawyerdetail.component';
 import { EnquiryComponent } from './client/lawyerdetailpage/enquiry/enquiry.component';
+import { LoginService } from './shared/login.service';
+import { AuthGuard } from './shared/authguard.service';
+import { LawyerService } from './shared/models/lawyer.service';
+import { LawyerInfoService } from './shared/models/lawyerInfo.service';
 
 export const fireConfig = {
   apiKey: "AIzaSyD8ffkko4dHn9uo9NKeQzaVNK19OsFc9W4",
@@ -56,7 +60,9 @@ const myFirebaseAuthConfig = {
     routes,
     AngularFireModule.initializeApp(fireConfig, myFirebaseAuthConfig),
   ],
-  providers: [],
+  providers: [
+    LoginService, AuthGuard, LawyerService, LawyerInfoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

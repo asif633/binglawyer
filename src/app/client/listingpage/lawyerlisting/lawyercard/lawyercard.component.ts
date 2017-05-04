@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Lawyer } from '../../../../shared/models/lawyer.model';
 
 @Component({
   selector: 'app-lawyercard',
@@ -11,5 +12,7 @@ export class LawyercardComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @Input() lawyer: Lawyer; 
 
 }

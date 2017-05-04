@@ -1,3 +1,36 @@
-<p>
-  lawyermain works!
-</p>
+<app-navbar></app-navbar>
+
+<div class="uk-container uk-margin">
+<button class="uk-button" (click)="login()">Login</button>
+<button class="uk-button" (click)="logout()">Logout</button>
+
+
+<form>
+    <fieldset class="uk-fieldset">
+
+        <legend class="uk-legend">Legend</legend>
+
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="Enter Name" name="name" [(ngModel)]="name">
+        </div>
+
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="Enter Location" name="location" [(ngModel)]="location">
+        </div>
+
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="Experience" name="experience" [(ngModel)]="experience">
+        </div>
+
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="Description" name="description" [(ngModel)]="description">
+        </div>
+
+        <div class="uk-margin">
+            <button class="uk-button" (click)="addLawyer()">Add Lawyer</button>
+        </div>
+
+    </fieldset>
+</form>
+
+</div>

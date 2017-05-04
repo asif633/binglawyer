@@ -4,10 +4,10 @@
       <img src="../../assets/images/thumb_santosh74.jpg">
       <hr class="uk-divider-icon uk-hidden@m">
     </div>
-    <div class="uk-width-2-5@s">
-      <a>Lawyer Name</a>
-      <p>Location</p>
-      <p>8 years of experience</p>
+    <div class="uk-width-2-5@s" *ngIf="lawyer">
+      <a>{{lawyer.name}}</a>
+      <p>{{lawyer.location}}</p>
+      <p>{{lawyer.experience}}</p>
       <p>Area</p>
       <hr class="uk-divider-icon uk-hidden@m">
     </div>
@@ -30,10 +30,9 @@
   </div>
 </div>
 
-<div class="uk-card uk-card-default uk-card-hover uk-card-body uk-margin-top">
+<div *ngIf="lawyerInfo" class="uk-card uk-card-default uk-card-hover uk-card-body uk-margin-top">
 
-  <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua.</p>
+  {{lawyerInfo.description}}
 </div>
 
 <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-margin-top">

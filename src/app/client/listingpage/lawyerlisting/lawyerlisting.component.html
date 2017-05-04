@@ -1,2 +1,4 @@
-<app-lawyercard *ngFor="let i of [1,2,3,4,6]"></app-lawyercard>
+<div *ngFor="let law of lawyers">
+    <app-lawyercard [lawyer]="law"></app-lawyercard>
+</div>
 <!-- Pagination -->

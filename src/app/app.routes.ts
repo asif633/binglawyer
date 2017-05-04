@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     {path: '', component: AppComponent ,children:[
       {path: '', component: ClientmainComponent, children: [
         {path:'lawyerlisting', component: ListingcontainerComponent},
-        {path:'lawyerdetail', component: LawyerdetailcontainerComponent},
+        {path:'lawyerdetail/:id', component: LawyerdetailcontainerComponent},
       ]},
       {path: 'lawyer', component:LawyermainComponent},
       {path: 'admin', component: AdminmainComponent}
